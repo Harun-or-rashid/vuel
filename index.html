@@ -8,7 +8,10 @@
 </head>
 <body>
         <div id="ringku">
-<input type="text" v-model='message'> 
+<input type="text" v-model='text'> 
+<ul>
+    <li  v-for='member in members':key="member.id" >{{member.name}}</li>
+</ul>
        </div>
 
 
@@ -17,7 +20,32 @@
     <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
     <script>
         var data={
-            message:"BisMillah"
+            text:"live",
+            members:[ 
+                     {
+                        id:1,
+                        name:"ringku"
+                     },
+                     {
+                         id:2,
+                         name:"rakib"
+                     }
+                     ,
+                     {
+                         id:3,
+                         name:"rezwan"
+                     },
+                     {
+                         id:4,
+                         name:"rita"
+                     },
+                     {
+                         id:5,
+                         name:"anik"
+                     } 
+                    ]
+        
+            
         };
 
         var Vue= new Vue({
